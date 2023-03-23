@@ -1,0 +1,25 @@
+/* Set the background color of the scene */
+.root {
+    -fx-background-color: #1c1c1c;
+}
+
+/* Style the score label */
+.label {
+    -fx-text-fill: purple;
+    -fx-font-size: 15px;
+    -fx-font-family: 'Roboto Mono', monospace;
+}
+
+/* Style the body size label */
+#body-size-label {
+    -fx-text-fill: purple;
+    -fx-font-size: 15px;
+    -fx-font-family: 'Roboto Mono', monospace;
+}
+
+/* Style the canvas */
+.canvas {
+    -fx-border-color: white;
+    -fx-border-width: 1px;
+    -fx-effect: dropshadow(three-pass-box, rgba(255, 255, 255, 0.4), 10, 0, 0, 0);
+}
