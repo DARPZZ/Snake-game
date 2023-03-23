@@ -124,9 +124,11 @@ public class SnakeGame extends Application
                 Scene creategameover = gameover.createGamveOverScene(timeline);
                 stage.setScene(creategameover);
                 stage.show();
+                running = true;
+                gameover.changeSceneBack(stage, scene, timeline, this);
 
             }
-            gameover.changeSceneBack(stage, scene, timeline, this);
+
 
 
         }));
@@ -161,10 +163,11 @@ public class SnakeGame extends Application
                 stage.setScene(creategameover);
                 stage.show();
 
+                running= true;
+                gameover.changeSceneBack(stage, scene, timeline, this);
 
             }
-            running = true;
-            gameover.changeSceneBack(stage, scene, timeline, this);
+
         }));
         timeline.play();
         food.generate(SCREEN_WIDTH, SCREEN_HEIGHT, UNITSIZE);
@@ -237,7 +240,8 @@ public class SnakeGame extends Application
         scorelabel.setText(("Score: " + score));
         snake.reset();
         bodySize.setText(("Body size: " + snake.getBodyParts()));
-        timeline.play();
+        speed = 100;
+        updateTimeline();
 
     }
 
