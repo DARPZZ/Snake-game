@@ -6,6 +6,7 @@ import javafx.scene.canvas.GraphicsContext;
 import javafx.scene.input.KeyCode;
 import javafx.scene.input.KeyEvent;
 import javafx.scene.paint.Color;
+import javafx.util.Duration;
 
 import static com.example.snakegamefucked.SnakeGame.GAME_UNITS;
 import static com.example.snakegamefucked.SnakeGame.UNITSIZE;
@@ -13,9 +14,24 @@ import static com.example.snakegamefucked.SnakeGame.UNITSIZE;
 public class Snake
 {
     char direction ='R';
+
+
     final int x[] = new int[GAME_UNITS];
     final int y[] = new int[GAME_UNITS];
     int bodyParts = 4;
+
+    public int getSnakeHeadSize()
+    {
+        return snakeHeadSize;
+    }
+
+    public void setSnakeHeadSize(int snakeHeadSize)
+    {
+        this.snakeHeadSize = snakeHeadSize;
+    }
+
+    private int snakeHeadSize;
+
 
 
     public void move() {
@@ -24,6 +40,7 @@ public class Snake
             x[i] = x[i - 1];
             y[i] = y[i - 1];
         }
+
         switch (direction) {
             case 'U':
                 y[0] = y[0] - UNITSIZE;
@@ -36,6 +53,7 @@ public class Snake
                 break;
             case 'R':
                 x[0] = x[0] + UNITSIZE;
+
                 break;
         }
     }
@@ -63,19 +81,32 @@ public class Snake
             }
         });
     }
+
     public void drawSnake(GraphicsContext gc, int SCREEN_WIDTH, int SCREEN_HEIGHT) {
         gc.clearRect(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT);
         for (int i = 0; i < bodyParts; i++) {
-            if (i == 0)
-            {
+            if (i == 0) {
                 gc.setFill(Color.GREENYELLOW);
-                gc.fillRect(x[i],y[i],UNITSIZE,UNITSIZE);
-            }else {
+                if (snakeHeadSize > 0) {
+                    if (direction == 'R' || direction == 'L')
+                    {
+                        gc.fillRect(x[i], y[i], UNITSIZE, UNITSIZE*2);
+                    } else if (direction == 'U' || direction == 'D') {
+                        gc.fillRect(x[i], y[i], UNITSIZE*2, UNITSIZE);
+                    }
+
+                } else {
+                    gc.fillRect(x[i], y[i], UNITSIZE, UNITSIZE);
+                }
+            } else {
                 gc.setFill(Color.DARKORANGE);
-                gc.fillRect(x[i],y[i],UNITSIZE,UNITSIZE);
+                gc.fillRect(x[i], y[i], UNITSIZE, UNITSIZE);
             }
         }
     }
+
+
+
     public char getDirection()
     {
         return direction;
@@ -108,7 +139,8 @@ public class Snake
     private final int initialX = 0;
     private final int initialY = 0;
 
-    public void reset() {
+    public void reset()
+    {
         // set the position of the snake to its initial position
         for (int i = 0; i < bodyParts; i++) {
             x[i] = initialX - i * UNITSIZE;

@@ -16,6 +16,7 @@ import javafx.stage.Stage;
 import javafx.util.Duration;
 
 import java.io.IOException;
+import java.util.SortedMap;
 import java.util.Timer;
 
 public class SnakeGame extends Application
@@ -104,8 +105,8 @@ public class SnakeGame extends Application
         timeline = new Timeline(new KeyFrame(Duration.millis(100), event ->
         {
             running = true;
-
             snake.move();
+
             snake.drawSnake(gc, SCREEN_WIDTH, SCREEN_HEIGHT);
             draw(gc);
             food.draw(gc);
@@ -113,6 +114,7 @@ public class SnakeGame extends Application
             checkWall();
             insaneMode();
             checkFood();
+
 
 
             scorelabel.setText("SCORE: " + getScore());
@@ -144,12 +146,14 @@ public class SnakeGame extends Application
             // update the timeline with the new speed
             snake.move();
             snake.drawSnake(gc, SCREEN_WIDTH, SCREEN_HEIGHT);
+
             draw(gc);
             food.draw(gc);
             checkSelfHit();
             checkWall();
             insaneMode();
             checkFood();
+
 
             if (food.isVisible() == false) {
                 setScore(getScore() - 10);
@@ -162,7 +166,6 @@ public class SnakeGame extends Application
                 Scene creategameover = gameover.createGamveOverScene(timeline);
                 stage.setScene(creategameover);
                 stage.show();
-
                 running= true;
                 gameover.changeSceneBack(stage, scene, timeline, this);
 
@@ -200,8 +203,18 @@ public class SnakeGame extends Application
 
     public void checkFood()
     {
+        if (snake.getSnakeHeadSize() > 0)
+        {
+            checkHead();
+        }
+
         if (snake.getX()[0] == food.getX() && snake.getY()[0] == food.getY()) {
-            snake.setBodyParts(snake.getBodyParts() + 1);
+            if (food.isDouble()) {
+                snake.setSnakeHeadSize(snake.getSnakeHeadSize() + 1);
+
+            } else {
+                snake.setSnakeHeadSize(0);
+            }
             if (food.isSpecial()) {
                 speed = 50;
                 updateTimeline();
@@ -209,8 +222,13 @@ public class SnakeGame extends Application
                 speed = 100;
                 updateTimeline();
             }
+            snake.setBodyParts(snake.getBodyParts() + 1);
+
+            }
         }
-    }
+
+
+
 
     public void insaneMode()
     {
@@ -249,5 +267,14 @@ public class SnakeGame extends Application
     public static void main(String[] args)
     {
         launch();
+    }
+    public void checkHead()
+    {
+        if(snake.getX()[0]+25== food.getX() && snake.getY()[0]+25 == food.getY())
+        {
+            snake.setBodyParts(snake.getBodyParts() + 1);
+            System.out.println("Hej");
+            updateTimeline();
+        }
     }
 }

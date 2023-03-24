@@ -52,6 +52,7 @@ public class Gameover
         buttonR.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent event) {
+              snakeGame.snake.setSnakeHeadSize(0);
                 snakeGame.resgame();
                 stage.setScene(scene);
                 timeline.play();
