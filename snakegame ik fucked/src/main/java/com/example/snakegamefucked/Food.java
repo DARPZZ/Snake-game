@@ -56,10 +56,10 @@
             }
             isVisible = true;
             int randomNum = random.nextInt(100);
-            if (randomNum <= 2) {
+            if (randomNum <= 20) {
                 isSpecial = true;
                 isDouble = false;
-            } else if (randomNum <= 60) {
+            } else if (randomNum <= 50) {
                 isSpecial = false;
                 isDouble = true;
             } else {
@@ -70,7 +70,6 @@
             y = random.nextInt(height / unitSize) * unitSize;
             startTimer();
         }
-
         private void startTimer()
         {
             int visibleTime = MAX_VISIBLE_TIME;

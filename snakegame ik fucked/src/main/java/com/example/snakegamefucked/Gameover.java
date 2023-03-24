@@ -11,6 +11,8 @@ import javafx.stage.Stage;
 
 public class Gameover
 {
+    Label snakeSize = new Label();
+    Label score = new Label();
     Button buttonQ = new Button();
     Button buttonR = new Button();
     public Scene createGamveOverScene(Timeline timeline)
@@ -20,22 +22,34 @@ public class Gameover
 
         buttonR.setPrefWidth(100);
         buttonR.setPrefHeight(50);
-        buttonR.setLayoutX(250);
-        buttonR.setLayoutY(550);
-        buttonR.setText("Reset");
+        int xKordinat = 0;
+        int yKordinat = 0;
+        buttonR.setLayoutX(xKordinat+250);
+        buttonR.setLayoutY(yKordinat+50);
+        buttonR.setText("Play");
+
 
         buttonQ.setPrefWidth(100);
         buttonQ.setPrefHeight(50);
-        buttonQ.setLayoutX(250);
-        buttonQ.setLayoutY(50);
+        buttonQ.setLayoutX(buttonR.getLayoutX());
+        buttonQ.setLayoutY(buttonR.getLayoutY()+340);
         buttonQ.setText("Quit");
 
+
+
         Label gameover = new Label();
-        gameover.setLayoutX(150);
-        gameover.setLayoutY(buttonR.getLayoutY()/2);
+        gameover.setLayoutX(buttonR.getLayoutX()-100);
+        gameover.setLayoutY(buttonR.getLayoutY()+240);
         gameover.setText("GAME OVER!");
 
-        anchorPane.getChildren().addAll(buttonQ,buttonR,gameover);
+        score.setLayoutX(buttonR.getLayoutX()-40);
+        score.setLayoutY(buttonR.getLayoutY()+70);
+        snakeSize.setLayoutX(buttonR.getLayoutY()+150);
+        snakeSize.setLayoutY(buttonR.getLayoutY()+150);
+
+
+
+        anchorPane.getChildren().addAll(buttonR,score,snakeSize,gameover,buttonQ);
         Scene scene = new Scene(anchorPane, 600, 600);
         anchorPane.setId("bc");
         String css = this.getClass().getResource("/basicstyle2.css").toExternalForm();
@@ -48,13 +62,18 @@ public class Gameover
     }
 
     public void changeSceneBack(Stage stage, Scene scene, Timeline timeline, SnakeGame snakeGame) {
-
+        score.setText( snakeGame.getScorelabel().getText());
+        snakeSize.setText("  Size: " + snakeGame.snake.getBodyParts());
         buttonR.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent event) {
+
+
               snakeGame.snake.setSnakeHeadSize(0);
                 snakeGame.resgame();
                 stage.setScene(scene);
+                snakeGame.setScore(0);
+                snakeGame.scorelabel.setText(("Score: " + snakeGame.score));
                 timeline.play();
             }
         });

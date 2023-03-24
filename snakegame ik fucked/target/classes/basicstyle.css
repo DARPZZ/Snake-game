@@ -6,15 +6,17 @@
 /* Style the score label */
 .label {
     -fx-text-fill: purple;
-    -fx-font-size: 15px;
+    -fx-font-size: 16px;
     -fx-font-family: 'Roboto Mono', monospace;
+    -fx-font-weight: bolder;
 }
 
 /* Style the body size label */
 #body-size-label {
     -fx-text-fill: purple;
-    -fx-font-size: 15px;
+    -fx-font-size: 16px;
     -fx-font-family: 'Roboto Mono', monospace;
+    -fx-font-weight: bolder;
 }
 
 /* Style the canvas */

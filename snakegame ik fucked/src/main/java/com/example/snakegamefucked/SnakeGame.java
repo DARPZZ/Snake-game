@@ -58,8 +58,7 @@ public class SnakeGame extends Application
     Label bodySize = new Label();
     Canvas canvas = new Canvas(SCREEN_WIDTH, SCREEN_HEIGHT);
     BorderPane borderPane = new BorderPane();
-
-
+        private  boolean colll = false;
     Label scorelabel = new Label();
     AnchorPane anchorPane = new AnchorPane();
     Scene scene = new Scene(borderPane, SCREEN_WIDTH, SCREEN_HEIGHT + 25);
@@ -97,16 +96,11 @@ public class SnakeGame extends Application
             gc.strokeLine(0, i * UNITSIZE, SCREEN_WIDTH, i * UNITSIZE);
         }
     }
-
     Timeline timeline = new Timeline();
-
     public void startGame()
     {
         timeline = new Timeline(new KeyFrame(Duration.millis(100), event ->
         {
-            running = true;
-            snake.move();
-
             snake.drawSnake(gc, SCREEN_WIDTH, SCREEN_HEIGHT);
             draw(gc);
             food.draw(gc);
@@ -115,24 +109,18 @@ public class SnakeGame extends Application
             insaneMode();
             checkFood();
 
+            scorelabel.setText("Score: " + getScore());
 
 
-            scorelabel.setText("SCORE: " + getScore());
-            if (food.isVisible() == false) {
-                setScore(getScore() - 10);
-                food.generate(SCREEN_WIDTH, SCREEN_HEIGHT, UNITSIZE);
-            }
             if (running == false) {
                 Scene creategameover = gameover.createGamveOverScene(timeline);
                 stage.setScene(creategameover);
                 stage.show();
                 running = true;
                 gameover.changeSceneBack(stage, scene, timeline, this);
-
             }
-
-
-
+            running = true;
+            snake.move();
         }));
         timeline.setCycleCount(Animation.INDEFINITE);
         timeline.play();
@@ -153,13 +141,10 @@ public class SnakeGame extends Application
             checkWall();
             insaneMode();
             checkFood();
-
-
             if (food.isVisible() == false) {
                 setScore(getScore() - 10);
                 scorelabel.setText("Score: " + score);
                 food.generate(SCREEN_WIDTH, SCREEN_HEIGHT, UNITSIZE);
-
             }
             if (running == false) {
 
@@ -203,14 +188,11 @@ public class SnakeGame extends Application
 
     public void checkFood()
     {
-        if (snake.getSnakeHeadSize() > 0)
-        {
-            checkHead();
-        }
-
-        if (snake.getX()[0] == food.getX() && snake.getY()[0] == food.getY()) {
+        missedFood();
+        if (hasHit() == true) {
+            snake.setBodyParts(snake.getBodyParts() + 1);
             if (food.isDouble()) {
-                snake.setSnakeHeadSize(snake.getSnakeHeadSize() + 1);
+                snake.setSnakeHeadSize(1);
 
             } else {
                 snake.setSnakeHeadSize(0);
@@ -222,21 +204,18 @@ public class SnakeGame extends Application
                 speed = 100;
                 updateTimeline();
             }
-            snake.setBodyParts(snake.getBodyParts() + 1);
-
-            }
         }
+    }
 
 
 
 
     public void insaneMode()
     {
-
-        if (snake.getBodyParts() % 12 == 0) {
+        if (snake.getBodyParts() % 20 == 0) {
             canvas.setRotate(180);
 
-        } else if (snake.getBodyParts() % 12 != 0) {
+        } else if (snake.getBodyParts() % 20 != 0) {
             canvas.setRotate(0);
         }
     }
@@ -268,13 +247,31 @@ public class SnakeGame extends Application
     {
         launch();
     }
-    public void checkHead()
+    public void toHeadCOl()
     {
-        if(snake.getX()[0]+25== food.getX() && snake.getY()[0]+25 == food.getY())
-        {
             snake.setBodyParts(snake.getBodyParts() + 1);
             System.out.println("Hej");
             updateTimeline();
+    }
+    public boolean hasHit()
+    {
+        if (snake.getX()[0] == food.getX() && snake.getY()[0] == food.getY()) {
+            return true;
+        }
+        if (snake.getSnakeHeadSize()>0)
+        {
+            if(snake.getX()[0]+UNITSIZE== food.getX() && snake.getY()[0]+UNITSIZE == food.getY())
+            {
+                return true;
+            }
+        }
+            return false;
+    }
+    public void missedFood()
+    {
+        if (food.isVisible() == false) {
+            setScore(getScore() - 10);
+            food.generate(SCREEN_WIDTH, SCREEN_HEIGHT, UNITSIZE);
         }
     }
 }
