@@ -1,9 +1,4 @@
-.label {
-    -fx-font-size: 48px;
-    -fx-font-weight: bold;
-    -fx-text-fill: #00FFFF;
-   // -fx-effect: dropshadow(gaussian, #8C43FF, 20, 0, 0, 0);
-}
+
 .button {
     -fx-background-color: linear-gradient(from 0% 0% to 100% 100%, #3B9DFF, #8C43FF);
     -fx-background-radius: 30;
@@ -18,4 +13,17 @@
 }
 #bc {
     -fx-background-color: linear-gradient(from 0% 0% to 100% 100%, #202540, #151B28);
+}
+#confirm{
+    -fx-font-size: 15px;
+}
+.myColumn {
+    -fx-text-fill: black;
+    -fx-font-size: 14px;
+}
+#label {
+    -fx-font-size: 48px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #00FFFF;
+// -fx-effect: dropshadow(gaussian, #8C43FF, 20, 0, 0, 0);
 }
