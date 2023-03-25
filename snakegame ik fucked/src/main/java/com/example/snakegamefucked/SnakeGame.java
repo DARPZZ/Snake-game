@@ -27,16 +27,11 @@ public class SnakeGame extends Application
     public Stage stage;
     Gameover gameover = new Gameover();
     private GraphicsContext gc;
-    Rotate rotate = new Rotate();
     static final int SCREEN_WIDTH = 600;
     static final int SCREEN_HEIGHT = 600;
     static final int UNITSIZE = 25;
-    Timer timer = new Timer();
     public int speed;
-
     static final int GAME_UNITS = SCREEN_WIDTH * SCREEN_HEIGHT / UNITSIZE;
-
-
     boolean running = false;
     Food food = new Food(UNITSIZE);
 
@@ -56,17 +51,13 @@ public class SnakeGame extends Application
     {
         this.score = score;
     }
-
     public int score = 0;
     Label bodySize = new Label();
     Canvas canvas = new Canvas(SCREEN_WIDTH, SCREEN_HEIGHT);
     BorderPane borderPane = new BorderPane();
-        private  boolean colll = false;
     Label scorelabel = new Label();
-    private boolean pausegame = false;
     AnchorPane anchorPane = new AnchorPane();
     Scene scene = new Scene(borderPane, SCREEN_WIDTH, SCREEN_HEIGHT + 25);
-
     @Override
     public void start(Stage stage) throws IOException
     {
@@ -87,7 +78,6 @@ public class SnakeGame extends Application
         bodySize.setText("Body size: " + snake.getBodyParts());
         snake.changeDirection(scene);
         food.generate(SCREEN_WIDTH, SCREEN_HEIGHT, UNITSIZE);
-
         stage.setTitle("Snake");
         stage.setScene(scene);
         stage.show();
@@ -103,28 +93,9 @@ public class SnakeGame extends Application
     Timeline timeline = new Timeline();
     public void startGame()
     {
-        timeline = new Timeline(new KeyFrame(Duration.millis(100), event ->
+        timeline = new Timeline(new KeyFrame(Duration.millis(85), event ->
         {
-
-            snake.drawSnake(gc, SCREEN_WIDTH, SCREEN_HEIGHT);
-            draw(gc);
-            food.draw(gc);
-            checkSelfHit();
-            checkWall();
-            insaneMode();
-            checkFood();
-            scorelabel.setText("Score: " + getScore());
-            if (running == false) {
-                Scene creategameover = gameover.createGamveOverScene(timeline);
-                stage.setScene(creategameover);
-                stage.show();
-                running = true;
-                gameover.changeSceneBack(stage, scene, timeline, this);
-            }
-            snake.move();
-            running = true;
-
-
+          checks();
         }));
         timeline.setCycleCount(Animation.INDEFINITE);
         timeline.play();
@@ -135,30 +106,13 @@ public class SnakeGame extends Application
         timeline.stop();// stop the timeline
         timeline.getKeyFrames().set(0, new KeyFrame(Duration.millis(speed), event ->
         {
-            // update the timeline with the new speed
-            snake.move();
-            snake.drawSnake(gc, SCREEN_WIDTH, SCREEN_HEIGHT);
-
-            draw(gc);
-            food.draw(gc);
-            checkSelfHit();
-            checkWall();
-            insaneMode();
-            checkFood();
+            checks();
             if (food.isVisible() == false) {
                 setScore(getScore() - 10);
                 scorelabel.setText("Score: " + score);
                 food.generate(SCREEN_WIDTH, SCREEN_HEIGHT, UNITSIZE);
             }
-            if (running == false) {
 
-                Scene creategameover = gameover.createGamveOverScene(timeline);
-                stage.setScene(creategameover);
-                stage.show();
-                running= true;
-                gameover.changeSceneBack(stage, scene, timeline, this);
-
-            }
 
         }));
         timeline.play();
@@ -271,6 +225,27 @@ public class SnakeGame extends Application
             setScore(getScore() - 10);
             food.generate(SCREEN_WIDTH, SCREEN_HEIGHT, UNITSIZE);
         }
+    }
+    public void checks()
+    {
+        snake.drawSnake(gc, SCREEN_WIDTH, SCREEN_HEIGHT);
+        draw(gc);
+        food.draw(gc);
+        checkSelfHit();
+        checkWall();
+        insaneMode();
+        checkFood();
+        scorelabel.setText("Score: " + getScore());
+        if (running == false) {
+            Scene creategameover = gameover.createGamveOverScene(timeline);
+            stage.setScene(creategameover);
+            stage.show();
+            running = true;
+            gameover.changeSceneBack(stage, scene, timeline, this);
+        }
+        snake.move();
+        running = true;
+
     }
 
 

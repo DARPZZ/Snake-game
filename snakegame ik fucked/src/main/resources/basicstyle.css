@@ -14,9 +14,9 @@
 /* Style the body size label */
 #body-size-label {
     -fx-text-fill: purple;
-    -fx-font-size: 16px;
+    -fx-font-size: 18px;
     -fx-font-family: 'Roboto Mono', monospace;
-    -fx-font-weight: bolder;
+    -fx-font-weight: bold;
 }
 
 /* Style the canvas */

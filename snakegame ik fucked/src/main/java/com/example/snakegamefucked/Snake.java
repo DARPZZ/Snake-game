@@ -86,7 +86,7 @@ public class Snake
         gc.clearRect(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT);
         for (int i = 0; i < bodyParts; i++) {
             if (i == 0) {
-                gc.setFill(Color.GREENYELLOW);
+                gc.setFill(Color.DARKGREEN);
                 if (snakeHeadSize > 0) {
                     if (direction == 'R' || direction == 'L')
                     {
@@ -99,14 +99,14 @@ public class Snake
                     gc.fillRect(x[i], y[i], UNITSIZE, UNITSIZE);
                 }
             } else {
-                gc.setFill(Color.DARKORANGE);
+                gc.setFill(Color.LIGHTGREEN);
                 gc.fillRect(x[i], y[i], UNITSIZE, UNITSIZE);
             }
         }
     }
 
 
-
+//region get/set
     public char getDirection()
     {
         return direction;
@@ -138,6 +138,7 @@ public class Snake
     }
     private final int initialX = 0;
     private final int initialY = 0;
+    //endregion
 
     public void reset()
     {

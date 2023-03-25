@@ -9,8 +9,7 @@
 
     public class Food
     {
-        private static final int MAX_VISIBLE_TIME = 7000; // in milliseconds
-
+        private static final int MAX_VISIBLE_TIME = 5500;
 
         private Random random = new Random();
         private int x;
@@ -21,35 +20,12 @@
         private TimerTask timerTask;
         private boolean isVisible;
 
-        public boolean isDouble()
-        {
-            return isDouble;
-        }
+
 
         private boolean isDouble;
         private boolean isSpecial;
 
-        public boolean isSnakeDouble()
-        {
-            return isSnakeDouble;
-        }
 
-        public void setSnakeDouble(boolean snakeDouble)
-        {
-            isSnakeDouble = snakeDouble;
-        }
-
-        private boolean isSnakeDouble;
-
-        public boolean isSpecial()
-        {
-            return isSpecial;
-        }
-
-        public void setSpecial(boolean special)
-        {
-            isSpecial = special;
-        }
 
 
 
@@ -113,6 +89,7 @@
             }
         }
 
+        //region get/set
         public double getX()
         {
             return x;
@@ -127,12 +104,38 @@
         {
             return size;
         }
+        public boolean isDouble()
+        {
+            return isDouble;
+        }
 
         public boolean isVisible()
         {
             return isVisible;
         }
+        public boolean isSnakeDouble()
+        {
+            return isSnakeDouble;
+        }
 
+        public void setSnakeDouble(boolean snakeDouble)
+        {
+            isSnakeDouble = snakeDouble;
+        }
+
+        private boolean isSnakeDouble;
+
+        public boolean isSpecial()
+        {
+            return isSpecial;
+        }
+
+        public void setSpecial(boolean special)
+        {
+            isSpecial = special;
+        }
+
+        //endregion
         public void cancelTimer()
         {
             if (timer != null) {

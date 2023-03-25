@@ -85,10 +85,6 @@ public class Gameover
         snakeSize.setLayoutY(buttonR.getLayoutY()+150);
         CreateTable();
 
-
-
-
-
         anchorPane.getChildren().addAll(buttonR,score,snakeSize,gameover,buttonQ,textFieldNavn,confirm,tableView);
         Scene scene = new Scene(anchorPane, 600, 900);
         anchorPane.setId("bc");
@@ -119,7 +115,6 @@ public class Gameover
             }
         });
 
-
         buttonQ.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent event) {
@@ -137,10 +132,10 @@ public class Gameover
                 if (keyEvent.getCode().equals(KeyCode.ENTER))
                 {
                     String navn = textFieldNavn.getText();
-                    SnakeTable ko = new SnakeTable(navn,snakeGame.snake.getBodyParts(), snakeGame.getScore());
+                    SnakeTable snakeTable = new SnakeTable(navn,snakeGame.snake.getBodyParts(), snakeGame.getScore());
                     try {
 
-                        pd.addProject(ko);
+                        pd.addProject(snakeTable);
 
                     }catch (Exception e)
                     {

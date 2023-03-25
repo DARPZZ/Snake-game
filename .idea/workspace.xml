@@ -4,12 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8f9f1939-7e02-4b77-84fd-b91f9c4018e1" name="Changes" comment="">
+    <list default="true" id="8f9f1939-7e02-4b77-84fd-b91f9c4018e1" name="Changes" comment="Fixet scoreboard">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/snakegame ik fucked/src/main/java/com/example/snakegamefucked/Database/SnakeImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/snakegame ik fucked/src/main/java/com/example/snakegamefucked/Database/SnakeImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/snakegame ik fucked/src/main/java/com/example/snakegamefucked/Food.java" beforeDir="false" afterPath="$PROJECT_DIR$/snakegame ik fucked/src/main/java/com/example/snakegamefucked/Food.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/snakegame ik fucked/src/main/java/com/example/snakegamefucked/Gameover.java" beforeDir="false" afterPath="$PROJECT_DIR$/snakegame ik fucked/src/main/java/com/example/snakegamefucked/Gameover.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/snakegame ik fucked/src/main/resources/basicstyle2.css" beforeDir="false" afterPath="$PROJECT_DIR$/snakegame ik fucked/src/main/resources/basicstyle2.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/snakegame ik fucked/target/classes/basicstyle2.css" beforeDir="false" afterPath="$PROJECT_DIR$/snakegame ik fucked/target/classes/basicstyle2.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/snakegame ik fucked/src/main/java/com/example/snakegamefucked/Snake.java" beforeDir="false" afterPath="$PROJECT_DIR$/snakegame ik fucked/src/main/java/com/example/snakegamefucked/Snake.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/snakegame ik fucked/src/main/java/com/example/snakegamefucked/SnakeGame.java" beforeDir="false" afterPath="$PROJECT_DIR$/snakegame ik fucked/src/main/java/com/example/snakegamefucked/SnakeGame.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/snakegame ik fucked/src/main/resources/basicstyle.css" beforeDir="false" afterPath="$PROJECT_DIR$/snakegame ik fucked/src/main/resources/basicstyle.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/snakegame ik fucked/target/classes/com/example/snakegamefucked/Database/SnakeImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/snakegame ik fucked/target/classes/com/example/snakegamefucked/Database/SnakeImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/snakegame ik fucked/target/classes/com/example/snakegamefucked/Gameover.class" beforeDir="false" afterPath="$PROJECT_DIR$/snakegame ik fucked/target/classes/com/example/snakegamefucked/Gameover.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -66,8 +69,16 @@
       <workItem from="1679756438330" duration="1661000" />
       <workItem from="1679758706949" duration="48000" />
       <workItem from="1679759014722" duration="469000" />
-      <workItem from="1679772713058" duration="1643000" />
+      <workItem from="1679772713058" duration="2699000" />
     </task>
+    <task id="LOCAL-00001" summary="Fixet scoreboard">
+      <created>1679774455221</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1679774455221</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -83,5 +94,9 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Fixet scoreboard" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fixet scoreboard" />
   </component>
 </project>
