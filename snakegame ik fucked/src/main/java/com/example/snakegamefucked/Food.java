@@ -27,6 +27,19 @@
         }
 
         private boolean isDouble;
+        private boolean isSpecial;
+
+        public boolean isSnakeDouble()
+        {
+            return isSnakeDouble;
+        }
+
+        public void setSnakeDouble(boolean snakeDouble)
+        {
+            isSnakeDouble = snakeDouble;
+        }
+
+        private boolean isSnakeDouble;
 
         public boolean isSpecial()
         {
@@ -38,7 +51,7 @@
             isSpecial = special;
         }
 
-        private boolean isSpecial;
+
 
         public Food(int squareSize)
         {
