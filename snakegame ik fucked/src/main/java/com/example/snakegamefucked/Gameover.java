@@ -75,13 +75,13 @@ public class Gameover
 
 
 
-        gameover.setLayoutX(buttonR.getLayoutX()-100);
+        gameover.setLayoutX(buttonR.getLayoutX()-125);
         gameover.setLayoutY(buttonR.getLayoutY()+240);
         gameover.setText("GAME OVER!");
 
-        score.setLayoutX(buttonR.getLayoutX()-40);
+        score.setLayoutX(buttonR.getLayoutX()-50);
         score.setLayoutY(buttonR.getLayoutY()+70);
-        snakeSize.setLayoutX(buttonR.getLayoutY()+150);
+        snakeSize.setLayoutX(buttonR.getLayoutY()+145);
         snakeSize.setLayoutY(buttonR.getLayoutY()+150);
         CreateTable();
 
@@ -173,7 +173,7 @@ public class Gameover
         bodyPartsColumn.getStyleClass().add("myColumn");
         bodyPartsColumn.setPrefWidth(50);
 
-        tableView.getColumns().addAll(nameColumn, scoreColumn, bodyPartsColumn);
+        tableView.getColumns().addAll(nameColumn, bodyPartsColumn, scoreColumn);
             populateTable();
 
     }

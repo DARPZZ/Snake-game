@@ -250,12 +250,7 @@ public class SnakeGame extends Application
     {
         launch();
     }
-    public void toHeadCOl()
-    {
-            snake.setBodyParts(snake.getBodyParts() + 1);
-            System.out.println("Hej");
-            updateTimeline();
-    }
+
     public boolean hasHit()
     {
         if (snake.getX()[0] == food.getX() && snake.getY()[0] == food.getY()) {

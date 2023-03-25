@@ -1,29 +1,53 @@
-
 .button {
-    -fx-background-color: linear-gradient(from 0% 0% to 100% 100%, #3B9DFF, #8C43FF);
+    -fx-background-color: linear-gradient(from 0% 0% to 100% 100%, #00baff, #0098ff);
     -fx-background-radius: 30;
-    -fx-text-fill: #ff00ff;
+    -fx-text-fill: #ffffff;
     -fx-font-weight: bold;
-    -fx-font-size: 25px;
-   
+    -fx-font-size: 20px;
+    -fx-effect: dropshadow(gaussian, #00baff, 10, 0, 0, 0);
 }
 
 .button:hover {
-    -fx-background-color: linear-gradient(from 0% 0% to 100% 100%, #00FFFF, #0066FF);
+    -fx-background-color: linear-gradient(from 0% 0% to 100% 100%, #00eaff, #00baff);
 }
+
 #bc {
-    -fx-background-color: linear-gradient(from 0% 0% to 100% 100%, #202540, #151B28);
+    -fx-background-color: linear-gradient(from 0% 0% to 100% 100%, #252830, #1b1e24);
 }
-#confirm{
-    -fx-font-size: 15px;
+
+#confirm {
+    -fx-font-size: 18px;
 }
+
 .myColumn {
-    -fx-text-fill: black;
+    -fx-text-fill: #ffffff;
     -fx-font-size: 14px;
-}
-#label {
-    -fx-font-size: 48px;
     -fx-font-weight: bold;
-    -fx-text-fill: #00FFFF;
-// -fx-effect: dropshadow(gaussian, #8C43FF, 20, 0, 0, 0);
+}
+
+#label {
+    -fx-font-size: 60px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #00baff;
+    -fx-effect: dropshadow(gaussian, #00baff, 20, 0, 0, 0);
+}
+
+.table-view {
+    -fx-background-color: #1b1e24;
+    -fx-border-color: #00baff;
+    -fx-border-radius: 5;
+}
+
+.table-row-cell {
+    -fx-background-color: #1b1e24;
+}
+
+.table-row-cell:odd {
+    -fx-background-color: #17191e;
+}
+
+.table-row-cell:selected {
+    -fx-background-color: #00baff;
+    -fx-text-fill: #ffffff;
+    -fx-effect: dropshadow(gaussian, #00baff, 10, 0, 0, 0);
 }

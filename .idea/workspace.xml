@@ -4,7 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3078f1d1-3252-40b0-bc7e-ef0b83821b65" name="Changes" comment="" />
+    <list default="true" id="8f9f1939-7e02-4b77-84fd-b91f9c4018e1" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/snakegame ik fucked/src/main/java/com/example/snakegamefucked/Database/SnakeImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/snakegame ik fucked/src/main/java/com/example/snakegamefucked/Database/SnakeImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/snakegame ik fucked/src/main/java/com/example/snakegamefucked/Gameover.java" beforeDir="false" afterPath="$PROJECT_DIR$/snakegame ik fucked/src/main/java/com/example/snakegamefucked/Gameover.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/snakegame ik fucked/src/main/resources/basicstyle2.css" beforeDir="false" afterPath="$PROJECT_DIR$/snakegame ik fucked/src/main/resources/basicstyle2.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/snakegame ik fucked/target/classes/basicstyle2.css" beforeDir="false" afterPath="$PROJECT_DIR$/snakegame ik fucked/target/classes/basicstyle2.css" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -49,7 +55,7 @@
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="3078f1d1-3252-40b0-bc7e-ef0b83821b65" name="Changes" comment="" />
+      <changelist id="8f9f1939-7e02-4b77-84fd-b91f9c4018e1" name="Changes" comment="" />
       <created>1679742928347</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
@@ -59,6 +65,8 @@
       <workItem from="1679746078733" duration="10015000" />
       <workItem from="1679756438330" duration="1661000" />
       <workItem from="1679758706949" duration="48000" />
+      <workItem from="1679759014722" duration="469000" />
+      <workItem from="1679772713058" duration="1643000" />
     </task>
     <servers />
   </component>

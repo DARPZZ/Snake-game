@@ -47,11 +47,11 @@ public class SnakeImpl implements ProjectSnake
     public ArrayList<SnakeTable> getAll() throws SQLException {
         ArrayList<SnakeTable> ARL = new ArrayList<>();
         try {
-            PreparedStatement ps = con.prepareStatement("select * from snaketable order by fldScore , fldBodyparts, fldID desc");
+            PreparedStatement ps = con.prepareStatement("select * from snaketable order by fldScore desc");
             ResultSet rs = ps.executeQuery();
 
             while (rs.next()) {
-                ARL.add(new SnakeTable(rs.getString("fldName"), rs.getInt("fldScore"), rs.getInt("fldBodyparts")));
+                ARL.add(new SnakeTable(rs.getString("fldName"), rs.getInt("fldBodyparts"), rs.getInt("fldScore")));
             }
         } catch (SQLException e) {
             System.out.println(e);
