@@ -4,24 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3078f1d1-3252-40b0-bc7e-ef0b83821b65" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/snakegame ik fucked/src/main/java/com/example/snakegamefucked/Database/SnakeTable.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/Snake-game.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Snake-game.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/snakegame ik fucked/snakegamefucked.iml" beforeDir="false" afterPath="$PROJECT_DIR$/snakegame ik fucked/snakegamefucked.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/snakegame ik fucked/src/main/java/com/example/snakegamefucked/Gameover.java" beforeDir="false" afterPath="$PROJECT_DIR$/snakegame ik fucked/src/main/java/com/example/snakegamefucked/Gameover.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/snakegame ik fucked/src/main/java/com/example/snakegamefucked/SnakeGame.java" beforeDir="false" afterPath="$PROJECT_DIR$/snakegame ik fucked/src/main/java/com/example/snakegamefucked/SnakeGame.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/snakegame ik fucked/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/snakegame ik fucked/src/main/java/module-info.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/snakegame ik fucked/src/main/resources/basicstyle2.css" beforeDir="false" afterPath="$PROJECT_DIR$/snakegame ik fucked/src/main/resources/basicstyle2.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/snakegame ik fucked/target/classes/basicstyle2.css" beforeDir="false" afterPath="$PROJECT_DIR$/snakegame ik fucked/target/classes/basicstyle2.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/snakegame ik fucked/target/classes/com/example/snakegamefucked/Food$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/snakegame ik fucked/target/classes/com/example/snakegamefucked/Food$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/snakegame ik fucked/target/classes/com/example/snakegamefucked/Food.class" beforeDir="false" afterPath="$PROJECT_DIR$/snakegame ik fucked/target/classes/com/example/snakegamefucked/Food.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/snakegame ik fucked/target/classes/com/example/snakegamefucked/Gameover$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/snakegame ik fucked/target/classes/com/example/snakegamefucked/Gameover$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/snakegame ik fucked/target/classes/com/example/snakegamefucked/Gameover$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/snakegame ik fucked/target/classes/com/example/snakegamefucked/Gameover$2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/snakegame ik fucked/target/classes/com/example/snakegamefucked/Gameover.class" beforeDir="false" afterPath="$PROJECT_DIR$/snakegame ik fucked/target/classes/com/example/snakegamefucked/Gameover.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/snakegame ik fucked/target/classes/com/example/snakegamefucked/SnakeGame.class" beforeDir="false" afterPath="$PROJECT_DIR$/snakegame ik fucked/target/classes/com/example/snakegamefucked/SnakeGame.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/snakegame ik fucked/target/classes/module-info.class" beforeDir="false" afterPath="$PROJECT_DIR$/snakegame ik fucked/target/classes/module-info.class" afterDir="false" />
-    </list>
+    <list default="true" id="3078f1d1-3252-40b0-bc7e-ef0b83821b65" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -75,6 +58,7 @@
       <workItem from="1679743048197" duration="2752000" />
       <workItem from="1679746078733" duration="10015000" />
       <workItem from="1679756438330" duration="1661000" />
+      <workItem from="1679758706949" duration="48000" />
     </task>
     <servers />
   </component>
