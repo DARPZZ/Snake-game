@@ -4,11 +4,14 @@ import javafx.animation.Animation;
 import javafx.animation.KeyFrame;
 import javafx.animation.Timeline;
 import javafx.application.Application;
+import javafx.event.EventHandler;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.scene.canvas.Canvas;
 import javafx.scene.canvas.GraphicsContext;
 import javafx.scene.control.Label;
+import javafx.scene.input.KeyCode;
+import javafx.scene.input.KeyEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.transform.Rotate;
@@ -60,6 +63,7 @@ public class SnakeGame extends Application
     BorderPane borderPane = new BorderPane();
         private  boolean colll = false;
     Label scorelabel = new Label();
+    private boolean pausegame = false;
     AnchorPane anchorPane = new AnchorPane();
     Scene scene = new Scene(borderPane, SCREEN_WIDTH, SCREEN_HEIGHT + 25);
 
@@ -101,6 +105,7 @@ public class SnakeGame extends Application
     {
         timeline = new Timeline(new KeyFrame(Duration.millis(100), event ->
         {
+
             snake.drawSnake(gc, SCREEN_WIDTH, SCREEN_HEIGHT);
             draw(gc);
             food.draw(gc);
@@ -108,10 +113,7 @@ public class SnakeGame extends Application
             checkWall();
             insaneMode();
             checkFood();
-
             scorelabel.setText("Score: " + getScore());
-
-
             if (running == false) {
                 Scene creategameover = gameover.createGamveOverScene(timeline);
                 stage.setScene(creategameover);
@@ -119,8 +121,10 @@ public class SnakeGame extends Application
                 running = true;
                 gameover.changeSceneBack(stage, scene, timeline, this);
             }
-            running = true;
             snake.move();
+            running = true;
+
+
         }));
         timeline.setCycleCount(Animation.INDEFINITE);
         timeline.play();
@@ -239,7 +243,6 @@ public class SnakeGame extends Application
         bodySize.setText(("Body size: " + snake.getBodyParts()));
         speed = 100;
         updateTimeline();
-
     }
 
 
@@ -274,4 +277,6 @@ public class SnakeGame extends Application
             food.generate(SCREEN_WIDTH, SCREEN_HEIGHT, UNITSIZE);
         }
     }
+
+
 }
