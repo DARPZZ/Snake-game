@@ -83,6 +83,11 @@ public class SnakeGame extends Application
         stage.show();
     }
 
+    /**
+     * Draws the lines on the canvas
+     * @param gc
+     */
+
     public void draw(GraphicsContext gc)
     {
         for (int i = 0; i < SCREEN_HEIGHT / UNITSIZE; i++) {
@@ -91,6 +96,8 @@ public class SnakeGame extends Application
         }
     }
     Timeline timeline = new Timeline();
+
+
     public void startGame()
     {
         timeline = new Timeline(new KeyFrame(Duration.millis(85), event ->
@@ -123,6 +130,10 @@ public class SnakeGame extends Application
 
     }
 
+    /**
+     * checks if the snake is gonna hit the wall
+     * and sets running to false
+     */
     public void checkWall()
     {
         // Check if snake hits the wall
@@ -131,6 +142,10 @@ public class SnakeGame extends Application
         }
     }
 
+    /**
+     * The first if checks if the snake is in the top left cornor
+     *the other ones checks if the snake hit its own body
+     */
     public void checkSelfHit()
     {
         for (int i = snake.getBodyParts(); i > 0; i--) {
@@ -144,6 +159,9 @@ public class SnakeGame extends Application
         }
     }
 
+    /**
+     * checks what food the snake eats, and set the special effect tp updatetimeline
+     */
     public void checkFood()
     {
         missedFood();
@@ -166,14 +184,16 @@ public class SnakeGame extends Application
     }
 
 
-
+    /**
+     * rotates the canvas
+     */
 
     public void insaneMode()
     {
-        if (snake.getBodyParts() % 20 == 0) {
+        if (snake.getBodyParts() % 24 == 0) {
             canvas.setRotate(180);
 
-        } else if (snake.getBodyParts() % 20 != 0) {
+        } else if (snake.getBodyParts() % 24 != 0) {
             canvas.setRotate(0);
         }
     }
@@ -188,6 +208,9 @@ public class SnakeGame extends Application
         this.scorelabel.setText(String.valueOf(score));
     }
 
+    /**
+     * Resets the game
+     */
     public void resgame()
     {
         food.generate(SCREEN_WIDTH, SCREEN_HEIGHT, UNITSIZE);
@@ -205,6 +228,10 @@ public class SnakeGame extends Application
         launch();
     }
 
+    /**
+     * checks both if the normal head and the 2 head has hit the food
+     * @return
+     */
     public boolean hasHit()
     {
         if (snake.getX()[0] == food.getX() && snake.getY()[0] == food.getY()) {
@@ -219,6 +246,10 @@ public class SnakeGame extends Application
         }
             return false;
     }
+
+    /**
+     * Generates and sets 10- score if you dont get the food in time
+     */
     public void missedFood()
     {
         if (food.isVisible() == false) {
@@ -226,6 +257,10 @@ public class SnakeGame extends Application
             food.generate(SCREEN_WIDTH, SCREEN_HEIGHT, UNITSIZE);
         }
     }
+
+    /**
+     * Contains all the checks
+     */
     public void checks()
     {
         snake.drawSnake(gc, SCREEN_WIDTH, SCREEN_HEIGHT);

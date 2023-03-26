@@ -33,7 +33,11 @@ public class Snake
     private int snakeHeadSize;
 
 
-
+    /**
+     * This method sets the diffrent char to move in the diffrent directions
+     * U = UP. D = DOWN
+     * L = LEFT. R = RIGHT
+     */
     public void move() {
         // move the head
         for (int i = bodyParts - 1; i > 0; i--) {
@@ -57,6 +61,12 @@ public class Snake
                 break;
         }
     }
+
+    /**
+     * sets the diffrent directions
+     * Also makes sure it only can turn 90 degrees
+     * @param scene
+     */
     public void changeDirection(Scene scene) {
         scene.setOnKeyPressed(new EventHandler<KeyEvent>() {
             @Override
@@ -81,6 +91,14 @@ public class Snake
             }
         });
     }
+
+    /**
+     * Draws the snake.
+     * It sets the head and body to diffrent colours
+     * @param gc
+     * @param SCREEN_WIDTH
+     * @param SCREEN_HEIGHT
+     */
 
     public void drawSnake(GraphicsContext gc, int SCREEN_WIDTH, int SCREEN_HEIGHT) {
         gc.clearRect(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT);
@@ -140,6 +158,9 @@ public class Snake
     private final int initialY = 0;
     //endregion
 
+    /**
+     * Reset the snake to the top left when the method is called
+     */
     public void reset()
     {
         // set the position of the snake to its initial position

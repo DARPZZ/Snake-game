@@ -38,6 +38,13 @@
             isDouble = false;
         }
 
+        /**
+         *  This method decides the chances for each food to draw
+         * @param screen
+         * @param height
+         * @param unitSize
+         */
+
         public void generate(int screen, int height, int unitSize)
         {
             if (isVisible) {
@@ -74,6 +81,11 @@
             };
             timer.schedule(timerTask, visibleTime);
         }
+
+        /**
+         * Draws each food
+         * @param gc
+         */
 
         public void draw(GraphicsContext gc)
         {

@@ -35,16 +35,17 @@ public class Gameover
 
     ProjectSnake pd = new SnakeImpl();
 
+    /**
+     * Creates the new scene
+     * @param timeline
+     * @return
+     */
     public Scene createGamveOverScene(Timeline timeline)
     {
         snakeSize.setId("label");
         score.setId("label");
         gameover.setId("label");
-
-
-
         AnchorPane anchorPane = new AnchorPane();
-
         buttonR.setPrefWidth(100);
         buttonR.setPrefHeight(50);
         int xKordinat = 0;
@@ -52,10 +53,8 @@ public class Gameover
         buttonR.setLayoutX(xKordinat+250);
         buttonR.setLayoutY(yKordinat+20);
         buttonR.setText("Play");
-
         textFieldNavn.setDisable(false);
         textFieldNavn.setEditable(true);
-
         buttonQ.setPrefWidth(100);
         buttonQ.setPrefHeight(50);
         buttonQ.setLayoutX(buttonR.getLayoutX());
@@ -67,18 +66,13 @@ public class Gameover
         confirm.setLayoutX(textFieldNavn.getLayoutX()+150);
         confirm.setLayoutY(textFieldNavn.getLayoutY());
         confirm.setId("confirm");
-
         tableView.setLayoutX(textFieldNavn.getLayoutX()-100);
         tableView.setLayoutY(textFieldNavn.getLayoutY()+75);
         tableView.setMaxHeight(200);
         tableView.setPrefWidth(350);
-
-
-
         gameover.setLayoutX(buttonR.getLayoutX()-125);
         gameover.setLayoutY(buttonR.getLayoutY()+240);
         gameover.setText("GAME OVER!");
-
         score.setLayoutX(buttonR.getLayoutX()-50);
         score.setLayoutY(buttonR.getLayoutY()+70);
         snakeSize.setLayoutX(buttonR.getLayoutY()+145);
@@ -96,6 +90,16 @@ public class Gameover
 
         return scene;
     }
+
+    /**
+     *  Here you can decide if you want to press:
+     *  Button play : changes scene back to snakegamescene, so you can play again
+     *  Button Quit: Closes the prorgram
+     * @param stage
+     * @param scene
+     * @param timeline
+     * @param snakeGame
+     */
 
     public void changeSceneBack(Stage stage, Scene scene, Timeline timeline, SnakeGame snakeGame) {
         getNameForL(snakeGame);
@@ -122,7 +126,13 @@ public class Gameover
             }
         });
     }
-    public void getNameForL(SnakeGame snakeGame )
+
+    /**
+     * Get the name from the textfield
+     * adds the score,bodysize and name to the database
+     * @param snakeGame
+     */
+    public void getNameForL(SnakeGame snakeGame)
     {
         textFieldNavn.setOnKeyPressed(new EventHandler<KeyEvent>()
         {
@@ -146,11 +156,14 @@ public class Gameover
                     textFieldNavn.setDisable(true);
                     textFieldNavn.setEditable(false);
                 }
-
             }
         });
 
     }
+
+    /**
+     * Creates the diffrent collums for my table view
+     */
     public void CreateTable()
     {
         TableColumn<SnakeTable, String> nameColumn = new TableColumn<>("Name");
@@ -172,6 +185,10 @@ public class Gameover
             populateTable();
 
     }
+
+    /**
+     * adds data to my tableview
+     */
     public void populateTable()
     {
         try {
