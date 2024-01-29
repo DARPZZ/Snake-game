@@ -17,7 +17,6 @@ import javafx.scene.layout.BorderPane;
 import javafx.scene.transform.Rotate;
 import javafx.stage.Stage;
 import javafx.util.Duration;
-
 import java.io.IOException;
 import java.util.SortedMap;
 import java.util.Timer;
@@ -179,6 +178,10 @@ public class SnakeGame extends Application
             } else {
                 speed = 100;
                 updateTimeline();
+            }
+            if (food.isDoublPoints())
+            {
+                score = getScore()+50-5;
             }
         }
     }

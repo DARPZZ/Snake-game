@@ -24,7 +24,7 @@
 
         private boolean isDouble;
         private boolean isSpecial;
-
+        private boolean isDoublPoints;
 
 
 
@@ -58,9 +58,14 @@
             } else if (randomNum <= 50) {
                 isSpecial = false;
                 isDouble = true;
+            } else if (randomNum <=95) {
+                isDouble = false;
+                isSpecial = false;
+                isDoublPoints = true;
             } else {
                 isSpecial = false;
                 isDouble = false;
+                isDoublPoints = false;
             }
             x = random.nextInt(screen / unitSize) * unitSize;
             y = random.nextInt(height / unitSize) * unitSize;
@@ -94,11 +99,14 @@
                     gc.setFill(Color.BLUE);
                 } else if (isDouble) {
                     gc.setFill(Color.ORANGE);
-                } else {
-                    gc.setFill(Color.MEDIUMVIOLETRED);
+                } else if (isDoublPoints) {
+                    gc.setFill(Color.LIGHTYELLOW);
                 }
-                gc.fillRect((Math.round(x / squareSize) * squareSize), Math.round(y / squareSize) * squareSize, size, size);
-            }
+                else {
+                        gc.setFill(Color.MEDIUMVIOLETRED);
+                    }
+                    gc.fillRect((Math.round(x / squareSize) * squareSize), Math.round(y / squareSize) * squareSize, size, size);
+                }
         }
 
         //region get/set
@@ -141,7 +149,10 @@
         {
             return isSpecial;
         }
-
+        public boolean isDoublPoints()
+        {
+            return isDoublPoints;
+        }
         public void setSpecial(boolean special)
         {
             isSpecial = special;
