@@ -36,6 +36,7 @@
             isVisible = false;
             isSpecial = false;
             isDouble = false;
+            isDoublPoints = false;
         }
 
         /**
@@ -52,13 +53,16 @@
             }
             isVisible = true;
             int randomNum = random.nextInt(100);
+
             if (randomNum <= 20) {
                 isSpecial = true;
                 isDouble = false;
+                isDoublPoints = false;
             } else if (randomNum <= 50) {
                 isSpecial = false;
                 isDouble = true;
-            } else if (randomNum <=95) {
+                isDoublPoints = false;
+            } else if (randomNum <=85) {
                 isDouble = false;
                 isSpecial = false;
                 isDoublPoints = true;

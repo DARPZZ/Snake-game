@@ -4,34 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8f9f1939-7e02-4b77-84fd-b91f9c4018e1" name="Changes" comment="ccs and code clean up">
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apiguardian_apiguardian_api_1_1_2.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_jupiter_junit_jupiter_api_5_8_2.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_jupiter_junit_jupiter_engine_5_8_2.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_platform_junit_platform_commons_1_8_2.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_platform_junit_platform_engine_1_8_2.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_openjfx_javafx_base_18_0_1.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_openjfx_javafx_base_win_18_0_1.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_openjfx_javafx_controls_18_0_1.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_openjfx_javafx_controls_win_18_0_1.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_openjfx_javafx_fxml_18_0_1.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_openjfx_javafx_fxml_win_18_0_1.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_openjfx_javafx_graphics_18_0_1.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_openjfx_javafx_graphics_win_18_0_1.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_opentest4j_opentest4j_1_2_0.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/sqljdbc4.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+    <list default="true" id="8f9f1939-7e02-4b77-84fd-b91f9c4018e1" name="Changes" comment="Ekstra points hvis du er heldig">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/snakegame ik fucked/snakegamefucked.iml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/snakegame ik fucked/src/main/java/com/example/snakegamefucked/Food.java" beforeDir="false" afterPath="$PROJECT_DIR$/snakegame ik fucked/src/main/java/com/example/snakegamefucked/Food.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/snakegame ik fucked/src/main/java/com/example/snakegamefucked/SnakeGame.java" beforeDir="false" afterPath="$PROJECT_DIR$/snakegame ik fucked/src/main/java/com/example/snakegamefucked/SnakeGame.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/snakegame ik fucked/target/classes/com/example/snakegamefucked/Gameover$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/snakegame ik fucked/target/classes/com/example/snakegamefucked/Gameover$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/snakegame ik fucked/target/classes/com/example/snakegamefucked/Gameover$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/snakegame ik fucked/target/classes/com/example/snakegamefucked/Gameover$2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/snakegame ik fucked/target/classes/com/example/snakegamefucked/Gameover$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/snakegame ik fucked/target/classes/com/example/snakegamefucked/Gameover$3.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/snakegame ik fucked/target/classes/com/example/snakegamefucked/Gameover.class" beforeDir="false" afterPath="$PROJECT_DIR$/snakegame ik fucked/target/classes/com/example/snakegamefucked/Gameover.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/snakegame ik fucked/target/classes/com/example/snakegamefucked/Snake$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/snakegame ik fucked/target/classes/com/example/snakegamefucked/Snake$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/snakegame ik fucked/target/classes/com/example/snakegamefucked/Food$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/snakegame ik fucked/target/classes/com/example/snakegamefucked/Food$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/snakegame ik fucked/target/classes/com/example/snakegamefucked/Food.class" beforeDir="false" afterPath="$PROJECT_DIR$/snakegame ik fucked/target/classes/com/example/snakegamefucked/Food.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/snakegame ik fucked/target/classes/com/example/snakegamefucked/SnakeGame.class" beforeDir="false" afterPath="$PROJECT_DIR$/snakegame ik fucked/target/classes/com/example/snakegamefucked/SnakeGame.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -61,28 +39,27 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Application.SnakeGame.executor": "Run",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "main",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/rasmu/Downloads/DB Material Week 43/DB Material Week 43/sqljdbc4.jar",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Libraries",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "preferences.pluginManager",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.SnakeGame.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/rasmu/Downloads/DB Material Week 43/DB Material Week 43/sqljdbc4.jar&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Libraries&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="com.example.snakegamefucked" />
@@ -117,7 +94,9 @@
       <workItem from="1702630921232" duration="121000" />
       <workItem from="1704224110320" duration="90000" />
       <workItem from="1704356891699" duration="18000" />
-      <workItem from="1706513855472" duration="1009000" />
+      <workItem from="1706513855472" duration="2515000" />
+      <workItem from="1706516944669" duration="875000" />
+      <workItem from="1706517872632" duration="308000" />
     </task>
     <task id="LOCAL-00001" summary="Fixet scoreboard">
       <created>1679774455221</created>
@@ -133,7 +112,23 @@
       <option name="project" value="LOCAL" />
       <updated>1679775679791</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Ekstra points hvis du er heldig">
+      <option name="closed" value="true" />
+      <created>1706514987937</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1706514987937</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Ekstra points hvis du er heldig">
+      <option name="closed" value="true" />
+      <created>1706515024051</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1706515024051</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -153,6 +148,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Fixet scoreboard" />
     <MESSAGE value="ccs and code clean up" />
-    <option name="LAST_COMMIT_MESSAGE" value="ccs and code clean up" />
+    <MESSAGE value="Ekstra points hvis du er heldig" />
+    <option name="LAST_COMMIT_MESSAGE" value="Ekstra points hvis du er heldig" />
   </component>
 </project>

@@ -164,13 +164,18 @@ public class SnakeGame extends Application
     public void checkFood()
     {
         missedFood();
+        missedFood();
         if (hasHit() == true) {
             snake.setBodyParts(snake.getBodyParts() + 1);
             if (food.isDouble()) {
+
                 snake.setSnakeHeadSize(1);
 
             } else {
                 snake.setSnakeHeadSize(0);
+            }
+            if (food.isDoublPoints()){
+                setScore(getScore()+5);
             }
             if (food.isSpecial()) {
                 speed = 50;
@@ -179,11 +184,9 @@ public class SnakeGame extends Application
                 speed = 100;
                 updateTimeline();
             }
-            if (food.isDoublPoints())
-            {
-                score = getScore()+50-5;
-            }
+
         }
+
     }
 
 
