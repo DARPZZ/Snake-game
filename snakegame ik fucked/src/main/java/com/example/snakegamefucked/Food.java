@@ -62,7 +62,7 @@
                 isSpecial = false;
                 isDouble = true;
                 isDoublPoints = false;
-            } else if (randomNum <=85) {
+            } else if (randomNum <=95) {
                 isDouble = false;
                 isSpecial = false;
                 isDoublPoints = true;

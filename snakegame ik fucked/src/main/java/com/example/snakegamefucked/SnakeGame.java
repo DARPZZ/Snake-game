@@ -164,7 +164,6 @@ public class SnakeGame extends Application
     public void checkFood()
     {
         missedFood();
-        missedFood();
         if (hasHit() == true) {
             snake.setBodyParts(snake.getBodyParts() + 1);
             if (food.isDouble()) {
